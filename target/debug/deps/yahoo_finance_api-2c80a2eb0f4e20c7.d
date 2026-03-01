@@ -1,9 +1,0 @@
-C:\Users\oskar\Documents\rust-api\target\debug\deps\yahoo_finance_api-2c80a2eb0f4e20c7.d: C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\lib.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\quotes.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\search_result.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\yahoo_error.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\async_impl.rs
-
-C:\Users\oskar\Documents\rust-api\target\debug\deps\libyahoo_finance_api-2c80a2eb0f4e20c7.rmeta: C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\lib.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\quotes.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\search_result.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\yahoo_error.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\async_impl.rs
-
-C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\lib.rs:
-C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\quotes.rs:
-C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\search_result.rs:
-C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\yahoo_error.rs:
-C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\yahoo_finance_api-4.1.0\src\async_impl.rs:
