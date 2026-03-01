@@ -1,0 +1,9 @@
+C:\Users\oskar\Documents\rust-api\target\debug\deps\tokio_tungstenite-748c4c0d786ab822.d: C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\lib.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\compat.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\connect.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\handshake.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\stream.rs
+
+C:\Users\oskar\Documents\rust-api\target\debug\deps\libtokio_tungstenite-748c4c0d786ab822.rmeta: C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\lib.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\compat.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\connect.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\handshake.rs C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\stream.rs
+
+C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\lib.rs:
+C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\compat.rs:
+C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\connect.rs:
+C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\handshake.rs:
+C:\Users\oskar\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\tokio-tungstenite-0.11.0\src\stream.rs:
