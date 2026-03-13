@@ -21,3 +21,6 @@ You should run **cargo run** and then visit the localhost "" for the api
 - alive_check: can be run with "http://localhost:3000/is_alive"
 
 - get_ticker_data: can we run with for example: "http://localhost:3000/data/AAPL?interval=1d&range=1d" 
+    Interval: m, d, wk, mo
+    Range: d, mo, y, max
+- get_ema: can be run with: "http://localhost:3000/ema/AAPL?interval=1d&range=6mo&smoothing_constant=0.2"

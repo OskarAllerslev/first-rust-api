@@ -1,22 +1,21 @@
-
-
 use axum::{routing::get, Router};
 mod handlers;
 
-
-
-// and this is the localhost interface
-// #[tokio::main]
-#[shuttle_runtime::main]
-async fn main() -> shuttle_axum::ShuttleAxum {
-    // this should  show our alive check funtion in the api
+// Vi bruger nu standard tokio i stedet for shuttle
+#[tokio::main]
+async fn main() {
+    // Sætter vores router op med dine endpoints
     let app = Router::new()
         .route("/is_alive", get(handlers::alive_check))
-        .route("/data/{ticker}", get(handlers::get_ticker_data));
+        .route("/data/{ticker}", get(handlers::get_ticker_data))
+        .route("/ema/{ticker}", get(handlers::get_ema));
     
-    // let adresse = "0.0.0.0:3000";
-    // let listener = tokio::net::TcpListener::bind(adresse).await.unwrap();
+    // Definerer adressen og porten
+    let adresse = "0.0.0.0:3000";
+    let listener = tokio::net::TcpListener::bind(adresse).await.unwrap();
     
-
-    Ok(app.into())
+    println!("API kører nu på http://{}", adresse);
+    
+    // Starter selve serveren
+    axum::serve(listener, app).await.unwrap();
 }
