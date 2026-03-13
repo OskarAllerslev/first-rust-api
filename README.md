@@ -18,6 +18,8 @@ To start the development server locally, run the following command in your termi
 cargo run
 ```
 
+As pr. 13-03-2026 its hosted on: "https://oskar-rust-api.onrender.com" hence you just append the `/is_alive` or other to the url. 
+
 Once running, the API will be available at: `http://localhost:3000` (for now its not hosted somewhere)
 
 ---
