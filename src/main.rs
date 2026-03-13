@@ -1,5 +1,7 @@
 use axum::{routing::get, Router};
 mod handlers;
+mod types;
+mod math;
 
 // Vi bruger nu standard tokio i stedet for shuttle
 #[tokio::main]

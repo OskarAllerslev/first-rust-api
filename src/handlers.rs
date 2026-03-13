@@ -3,9 +3,11 @@ use core::f64;
 // import our crates
 use axum::{Json, extract::{Path, Query}};
 use reqwest::{ StatusCode};
-use serde::{Deserialize, Serialize};
 use yahoo_finance_api as yahoo;
 use chrono::{Utc, TimeZone};
+
+use crate::types::{StockObservation, DataQueryParams, EmaQueryParams};
+use crate::math::calculate_ema;
 
 // this is the most basic handler
 
@@ -14,27 +16,6 @@ pub async fn alive_check() -> &'static str {
 }
 
 
-// we create our handler for the stock data 
-// we need to define what a row in our data looks like 
-// we need to tell rust that we whould translate this struct from and to JSON
-#[derive(Serialize, Deserialize)]
-pub struct StockObservation {
-    pub date: String,
-    pub close: f64,
-}
-
-#[derive(serde::Deserialize)]
-pub struct DataQueryParams{
-    pub interval: String, // til fetch_stock_data
-    pub range: String, // til fetch_stock_data
-}
-
-#[derive(serde::Deserialize)]
-pub struct EmaQueryParams{
-    pub interval: String, // til fetch_stock_data
-    pub range: String, // til fetch_stock_data
-    pub smoothing_constant: f64,
-}
 
 
 // we create the handler
@@ -69,24 +50,6 @@ pub async fn fetch_stock_data(
 
     Ok(observations)
 }
-
-pub fn calculate_ema(
-    data: &[StockObservation], 
-    smoothing_constant: f64
-) -> f64 {
-    let ema = data.iter().fold(None, |accumulating_variable: Option<f64>, obs| {
-        match accumulating_variable {
-            None => {
-                Some(obs.close)
-            }, 
-            Some(previous_ema) => {
-                Some(smoothing_constant * obs.close + (1.0 - smoothing_constant) * previous_ema)
-            }
-        }
-    });
-    ema.unwrap_or(0.0)
-}
-
 
 pub async fn get_ema(
     Path(ticker): Path<String>, 
