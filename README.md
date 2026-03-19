@@ -49,12 +49,29 @@ Calculates the EMA for a given stock based on selected parameters.
     * `smoothing_constant`: Weighting of the most recent data (e.g., `0.2`)
 * **Example:** `http://localhost:3000/ema/AAPL?interval=1d&range=6mo&smoothing_constant=0.2`
 
+### 4. `GET /var/{ticker}`
+
+Calculates the Historical Value at Risk (VaR) for a given stock ticker based on negative log returns. This endpoint fetches historical closing prices over a specified range and interval, calculates the continuous returns, and estimates the empirical quantile for the specified confidence level.
+
+**Query Parameters:**
+* `interval` (string, required): The data interval (e.g., `1d` for daily data).
+* `range` (string, required): The historical time range to fetch (e.g., `1y` for one year, `6mo` for six months).
+* `alpha` (float, required): The confidence level for the Value at Risk calculation (e.g., `0.95` for 95% confidence, `0.99` for 99% confidence).
+
+**Example Request:**
+`GET /var/AAPL?interval=1d&range=1y&alpha=0.99`
+
+**Example Response:**
+```json
+0.0452
+
 ---
 
 ## 🗺️ Roadmap & Learning Goals
 - [x] Initial API structure setup (Axum/Actix).
 - [x] Integration with external data sources for stock prices.
 - [x] Implementation of a technical indicator.
+- [x] Implementation of a risk measure.
 - [ ] Integration of **XGBoost** for predictive analysis.
 - [ ] Containerization with Docker?.
 
