@@ -20,3 +20,4 @@ pub struct EmaQueryParams{
     pub range: String, // til fetch_stock_data
     pub smoothing_constant: f64,
 }
+

@@ -68,18 +68,6 @@ pub async fn get_ema(
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // der hvor vi laver de faktiske api endpoints ----
 
 pub async fn get_ticker_data(
