@@ -66,7 +66,6 @@ Calculates the Historical Value at Risk (VaR) for a given stock ticker based on 
 0.0452
 
 ---
-
 ## 🗺️ Roadmap & Learning Goals
 - [x] Initial API structure setup (Axum/Actix).
 - [x] Integration with external data sources for stock prices.
