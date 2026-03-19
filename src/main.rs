@@ -8,7 +8,8 @@ async fn main() {
     let app = Router::new()
         .route("/is_alive", get(handlers::alive_check))
         .route("/data/{ticker}", get(handlers::get_ticker_data))
-        .route("/ema/{ticker}", get(handlers::get_ema));
+        .route("/ema/{ticker}", get(handlers::get_ema))
+        .route("/var/{ticker}", get(handlers::get_value_at_risk));
     
     // Læser porten fra Render, eller bruger 3000 lokalt
     let port = std::env::var("PORT").unwrap_or_else(|_| "3000".to_string());

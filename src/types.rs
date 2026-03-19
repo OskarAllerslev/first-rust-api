@@ -21,3 +21,10 @@ pub struct EmaQueryParams{
     pub smoothing_constant: f64,
 }
 
+
+#[derive(serde::Deserialize)]
+pub struct VARQueryParams {
+    pub interval: String, // til fetch_stock_data
+    pub range: String, // til fetch_stock_data
+    pub alpha: f64, // for the value at risk
+}

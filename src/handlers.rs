@@ -6,8 +6,8 @@ use reqwest::{ StatusCode};
 use yahoo_finance_api as yahoo;
 use chrono::{Utc, TimeZone};
 
-use crate::types::{StockObservation, DataQueryParams, EmaQueryParams};
-use crate::math::calculate_ema;
+use crate::types::{StockObservation, DataQueryParams, EmaQueryParams, VARQueryParams};
+use crate::math::{value_at_risk, calculate_ema};
 
 // this is the most basic handler
 
@@ -64,6 +64,17 @@ pub async fn get_ema(
     Ok(Json(final_ema))
 }
 
+pub async fn get_value_at_risk(
+    Path(ticker): Path<String>, 
+    Query(params): Query<VARQueryParams>,
+) -> Result<Json<f64>, StatusCode> {
+    let data = fetch_stock_data(&ticker, &params.interval, &params.range)
+        .await?;
+    if data.is_empty() { return Err(StatusCode::NOT_FOUND)}
+
+    let var = value_at_risk(&data, params.alpha);
+    Ok(Json(var))
+}
 
 
 
