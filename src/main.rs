@@ -1,4 +1,5 @@
 use axum::{routing::get, Router};
+use tower_http::cors::CorsLayer;
 mod handlers;
 mod types;
 mod math;
@@ -9,7 +10,8 @@ async fn main() {
         .route("/is_alive", get(handlers::alive_check))
         .route("/data/{ticker}", get(handlers::get_ticker_data))
         .route("/ema/{ticker}", get(handlers::get_ema))
-        .route("/var/{ticker}", get(handlers::get_value_at_risk));
+        .route("/var/{ticker}", get(handlers::get_value_at_risk))
+        .layer(CorsLayer::permissive());
     
     // Læser porten fra Render, eller bruger 3000 lokalt
     let port = std::env::var("PORT").unwrap_or_else(|_| "3000".to_string());
